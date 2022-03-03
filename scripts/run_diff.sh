@@ -16,7 +16,7 @@ if [[ -d ~/go/src/github.com/hashicorp/terraform-provider-clean-google ]]; then
   pushd ~/go/src/github.com/hashicorp/terraform-provider-clean-google
   git clean -fdx
   git reset --hard
-  git checkout main
+  git checkout master
   git pull
   popd
 else

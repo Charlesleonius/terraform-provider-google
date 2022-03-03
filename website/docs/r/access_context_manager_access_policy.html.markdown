@@ -52,6 +52,26 @@ resource "google_access_context_manager_access_policy" "access-policy" {
   title  = "my policy"
 }
 ```
+## Example Usage - Access Context Manager Access Policy Scoped
+
+
+```hcl
+resource "google_access_context_manager_access_policy" "access-policy" {
+  parent = "organizations/123456789"
+  title  = "my policy"
+  scopes = ["folders/123456789"]
+}
+```
+## Example Usage - Access Context Manager Access Policy Scoped
+
+
+```hcl
+resource "google_access_context_manager_access_policy" "access-policy" {
+  parent = "organizations/123456789"
+  title  = "my policy"
+  scopes = ["projects/123456789"]
+}
+```
 
 ## Argument Reference
 
@@ -70,6 +90,11 @@ The following arguments are supported:
 
 - - -
 
+
+* `scopes` -
+  (Optional)
+  Folder or project on which this policy is applicable.
+  Format: folders/{{folder_id}} or projects/{{project_id}}
 
 
 ## Attributes Reference

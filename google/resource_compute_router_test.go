@@ -222,7 +222,6 @@ resource "google_compute_router" "foobar" {
     advertised_ip_ranges {
       range = "6.7.0.0/16"
     }
-    keepalive_interval = 25
   }
 }
 `, routerName, routerName)
